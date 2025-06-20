@@ -1,262 +1,117 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>정인하 - Unity Programmer & Artist Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">About Me</a></li>
-							<li><a href="#skills">Skills</a></li>
-							<li><a href="#two">Career & License</a></li>
-							<li><a href="#one">Project</a></li>
-							<li><a href="#three">Education</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+<head>
+    <meta charset="UTF-8">
+    <title>Tokame's Portfolio</title>
+    <meta name="viewport" content="width=1024">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body>
+    <div class="container">
+        <!-- 좌측 사이드바 -->
+        <aside class="sidebar">
+            <div class="profile-logo">
+                <img src="images/profile-logo.jpg" alt="프로필 로고" class="logo-img" />
+            </div>
+            <h1>TOKAME's Portfolio</h1>
+            <p class="intro">
+Hello! I combine 3D modeling and development to bring original ideas to life and share my creative experiences.
+Interested in the magic where art meets code? Let’s create together!            </p>
+            <nav>
+                <ul>
+                    <li><a href="#portfolio">PORTPOLIO</a></li>
+                    <li><a href="#skills">SKILL</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>멀티크리에이터 정인하입니다.</h1>
-							<p>"코드와 캔버스 사이에서 길을 찾는 사람." <br />
-							개발자이자 아티스트인 저는, 기술과 예술이 만나는 지점을 탐구합니다.<br />
-							2D 일러스트, 3D 모델링, 인터랙티브 콘텐츠까지 다양한 작업을 경험하며 성장하고 있습니다.<br />
-							이 포트폴리오에서 제가 직접 만든 프로젝트와 아트워크들을 소개합니다.</p>
-							<ul class="actions">
-								<li><a href="#skills" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+        <!-- 우측 메인 컨텐츠 -->
+        <main class="main-content">
+            <div class="main-intro">
+                안녕하세요! 저는 3D 모델링과 개발을 함께 즐기는 창작자입니다.<br>
+                현실에 없는 무언가를 3D로 직접 구현하고, 그 작품을 웹 기술로 세상에 공개하는 과정을 사랑합니다.<br>
+                이 블로그에는 작업 과정, 개발 팁, 3D 아트워크, 그리고 창작의 즐거움을 기록합니다.<br>
+                나만의 창작물을 만드는 데 관심이 있거나, 3D와 개발의 시너지가 궁금하다면 함께 소통해요!
+            </div>
+            <!-- Portfolio Section -->
+            <section id="portfolio">
+                <h2>PORTFOLIO</h2>
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="3d">3D Modeling</button>
+                    <button class="filter-btn" data-filter="pixel">Pixel art</button>
+                    <button class="filter-btn" data-filter="project">Project</button>
+                </div>
+                <div class="portfolio-items">
+                    <!-- 3D 모델링 예시 (확대 모달, data-modal 없이) -->
+                    <div class="portfolio-item" data-category="3d">
+                        <img src="images/3d-ramune.png" alt="3D 라무네 모델">
+                        <div class="portfolio-info">
+                            <h3>라무네 무빙 포스터</h3>
+                            <p>블렌더로 제작한 얼음텍스쳐를 이용한 무빙 텍스쳐</p>
+                        </div>
+                    </div>
+                    <!-- 픽셀 아트 예시 -->
+                    <div class="portfolio-item" data-category="pixel">
+                        <img src="images/pixel-plave.png" alt="픽셀 플레이브">
+                        <div class="portfolio-info">
+                            <h3>픽셀로 그린 므메미무</h3>
+                            <p>플레이브 므메미무 팬아트</p>
+                        </div>
+                    </div>
+                    <!-- 프로젝트(외부 모달) -->
+                    <div class="portfolio-item" data-category="project" data-modal="jymg">
+                        <img src="images/jymg-banner.png" alt="조선요마기">
+                        <div class="portfolio-info">
+                            <h3>조선요마기</h3>
+                            <p>탄막 슈팅게임 프로젝트</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-				<!-- Skills -->
-					<section id="skills" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Skills</h2>
-							<p>Unity 프로그래밍, 3D 모델링, 2D 아트 등 다양한 기술로 창의적인 프로젝트를 만듭니다.</p>
-							<div class="features">
-								<section>
-									<i class="devicon-unity-original"></i>
-									<h3>Unity</h3>
-									<progress value="90" max="100"></progress>
-									<p>게임 개발, VR/AR, 인터랙티브 콘텐츠 제작.</p>
-								</section>
-								<section>
-									<i class="devicon-csharp-plain"></i>
-									<h3>C#</h3>
-									<progress value="85" max="100"></progress>
-									<p>Unity 엔진 기반 프로그래밍, 스크립팅.</p>
-								</section>
-								<section>
-									<i class="devicon-blender-original"></i>
-									<h3>3D Modeling (Blender)</h3>
-									<progress value="80" max="100"></progress>
-									<p>3D 에셋 제작 및 최적화.</p>
-								</section>
-								<section>
-									<i class="devicon-photoshop-plain"></i>
-									<h3>2D Art (Photoshop)</h3>
-									<progress value="85" max="100"></progress>
-									<p>캐릭터 디자인, 배경 일러스트, UI/UX 디자인.</p>
-								</section>
-								<section>
-									<i class="devicon-git-plain"></i>
-									<h3>Git</h3>
-									<progress value="85" max="100"></progress>
-									<p>깃허브를 통한 협업 및 버전 관리.</p>
-								</section>
-								<section>
-									<i class="devicon-visualstudio-plain"></i>
-									<h3>Visual Studio</h3>
-									<progress value="80" max="100"></progress>
-									<p>코드 작성 및 디버깅 환경.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>SKILL</h2>
+                <div class="skills-list">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C#" title="C#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"
+                        title="Python">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++"
+                        title="C++">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Unity_2021.svg" alt="Unity"
+                        title="Unity">
+                    <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git" title="Git">
+                </div>
+            </section>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Career & License</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>CONTACT</h2>
+                <ul class="contact-list horizontal">
+  <li>
+    <span>Email:</span>
+    <a href="mailto:rjsrkdvlftn@gmail.com">rjsrkdvlftn@gmail.com</a>
+    <span>|</span>
+    <span>GitHub:</span>
+    <a href="#">github.com/j-inha</a>
+    <span>|</span>
+    <span>Instagram:</span>
+    <a href="#">@your-instagram</a>
+  </li>
+</ul>
+            </section>
+        </main>
+    </div>
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+    <!-- 동적 모달용 div (초기에는 비어 있음, script.js에서 fetch로 채움) -->
+    <div id="generic-modal" class="modal-bg"></div>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+    <!-- 스크립트는 body 마지막에 두는 것을 권장 -->
+    <script src="script.js"></script>
+</body>
 
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>© Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
 </html>
