@@ -215,6 +215,7 @@ body {
 
 /* Contact list styles (한 줄 정렬, 중복 제거) */
 .contact-list {
+  font-family: 'GmarketSansTTFLight', 'Nanum Gothic', Arial, sans-serif;
   background: #fff;
   border-radius: 13px;
   box-shadow: 0 2px 12px #0001;
@@ -244,7 +245,7 @@ body {
   color: #217991;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.13rem;
+  font-size: 1.3rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -309,4 +310,36 @@ body {
     transform: scale(1);
     opacity: 1;
   }
+}
+.slider-viewport {
+  width: 540px;     /* 원하는 만큼 크게! */
+  max-width: 90vw;  /* 화면이 작으면 자동 축소 */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.5,0,0.5,1);
+  /* width는 JS에서 자동으로 처리하거나, 너무 길 필요 없음 */
+}
+
+.slide {
+  flex: 0 0 100%;      /* 한 장이 부모 폭을 다 차지 */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slide img {
+  width: 540px;         /* 실제 이미지 폭에 맞춤 */
+  border-radius: 14px;
+  box-shadow: 0 2px 10px #0002;
+}
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
 }

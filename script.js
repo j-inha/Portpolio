@@ -79,4 +79,41 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
+  function showModal(modalId, url) {
+  const modalBg = document.getElementById(modalId);
+  fetch(url)
+    .then(res => res.text())
+    .then(html => {
+      modalBg.innerHTML = html;
+      modalBg.style.display = "flex";
+      setModalEvents(modalBg);
+
+      // ⭐⭐⭐ 모달에 슬라이더가 있을 경우만 슬라이더 기능 적용
+      initModalSlider(modalBg);
+    });
+}
+
+// 슬라이더가 있는 경우만 실행
+function initModalSlider(modalBg) {
+  // id 네이밍에 맞춰서 유연하게 찾기 (여러 프로젝트 확장 가능)
+  const slider = modalBg.querySelector('.slider');
+  if (!slider) return;
+  const slides = slider.querySelectorAll('.slide');
+  if (slides.length === 0) return;
+
+  let currentIndex = 0;
+  function moveToSlide(index) {
+    if (index < 0) index = 0;
+    if (index > slides.length - 1) index = slides.length - 1;
+    currentIndex = index;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+  // 버튼 자동 인식 (id가 없을 경우 querySelector로 대체)
+  const prevBtn = modalBg.querySelector('button[id$="prevBtn"]');
+  const nextBtn = modalBg.querySelector('button[id$="nextBtn"]');
+  if (prevBtn) prevBtn.onclick = () => moveToSlide(currentIndex - 1);
+  if (nextBtn) nextBtn.onclick = () => moveToSlide(currentIndex + 1);
+
+  moveToSlide(0);
+}
 });

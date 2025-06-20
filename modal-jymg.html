@@ -1,20 +1,52 @@
-<div class="modal-content">
-  <span class="modal-close">&times;</span>
-  <img src="images/jymg-banner.png" alt="조선요마기 배너" style="width:100%;border-radius:10px;margin-bottom:1rem;">
-  <h2>조선요마기</h2>
-  <p>
-    <b>장르:</b> 탄막 슈팅게임<br>
-    <b>줄거리:</b>
-    조선시대를 배경으로 요마(妖魔)들이 출몰하는 마을을 구하기 위해,
-    주인공이 다양한 무기를 활용해 탄막을 피하며 싸우는 게임입니다.<br>
-    각 스테이지에는 독특한 보스와 탄막 패턴이 등장합니다!
-  </p>
-  <div class="modal-gallery">
-    <img src="images/jymg-still1.png" alt="스틸컷1" style="width:47%;margin:1%;">
-    <img src="images/jymg-still2.png" alt="스틸컷2" style="width:47%;margin:1%;">
+<div class="modal-content jymg-modal-content">
+  <!-- 메인 배너 -->
+  <img src="images/jymg-banner.png" alt="조선요마기 메인 배너" class="main-image" style="margin-bottom:24px;">
+
+  <!-- 게임 제목 -->
+
+  <!-- 슬라이더(간단히, 버튼은 필요하면 js 추가) -->
+  <div class="slider-container" style="margin: 32px auto;">
+    <div class="slider" id="modal-slider" style="display:flex; transition:transform 0.5s; width:100%;">
+      <div class="slide"><img src="images/jymg-still1.webp" alt="스크린샷1"></div>
+      <div class="slide"><img src="images/jymg-still2.png" alt="스크린샷2"></div>
+      <div class="slide"><img src="images/jymg-still3.webp" alt="스크린샷3"></div>
+      <!-- 필요에 따라 추가 -->
+    </div>
+    <div class="slider-controls">
+      <button id="modal-prevBtn">◀</button>
+      <button id="modal-nextBtn">▶</button>
+    </div>
   </div>
-  <div class="modal-role">
-    <b>담당 역할:</b><br>
-    기획, 3D 모델링, UI 디자인, 게임 플레이 구현, 탄막 패턴 스크립트 작성
+
+  <!-- 게임 정보 및 역할 소개 -->
+  <div class="intro-section" style="display:flex; gap:18px; justify-content:center; flex-wrap:wrap;">
+    <div class="intro-box">
+      <h3>게임 소개</h3>
+      <p>
+        <b>장르:</b> 탄막 슈팅게임<br>
+        <b>줄거리:</b>  
+        조선시대를 배경으로, 요마(妖魔)들이 출몰하는 마을을 구하기 위해<br>
+        주인공이 여러 무기를 활용해 탄막을 피하며 싸우는 게임입니다.<br>
+        각 스테이지마다 독특한 보스와 탄막 패턴이 등장합니다!
+      </p>
+    </div>
+    <div class="intro-box">
+      <h3>담당 역할</h3>
+      <p>
+        - 메인 프로그래밍/기획<br>
+        - 3D 배경 및 보스 디자인<br>
+        - 탄막 패턴 설계/이펙트<br>
+        - UI/UX 전반 구현<br>
+        <b>툴:</b> Unity, Blender, Photoshop 등
+      </p>
+    </div>
+  </div>
+
+  <!-- 다운로드 버튼 -->
+  <div class="game-section" style="margin-top:32px;">
+    <a href="https://drive.google.com/uc?export=download&id=1BZ4cvCqcdA533PAXHJUtp0F5qi05C5-4"
+       class="download-btn" target="_blank">
+      <i class="fas fa-download"></i> 게임 다운로드 (ZIP)
+    </a>
   </div>
 </div>
